@@ -13,5 +13,9 @@ Rails.application.routes.draw do
 
   get 'dashboard' => 'dashboard#show'
 
+  resources :articles do
+    resources :comments
+  end
+
   root 'home#show'
 end
